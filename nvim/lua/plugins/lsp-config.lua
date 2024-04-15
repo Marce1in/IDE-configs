@@ -14,6 +14,7 @@ return {
                 'tailwindcss',
                 'tsserver',
                 'dockerls',
+                'asm_lsp'
             }
         }
     },
@@ -30,6 +31,7 @@ return {
             lsp.tailwindcss.setup {capabilities = cap}
             lsp.tsserver.setup {capabilities = cap}
             lsp.dockerls.setup {capabilities = cap}
+            lsp.asm_lsp.setup {capabilities = cap}
 
             vim.keymap.set('n', 'ge', vim.lsp.buf.declaration, {})
             vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
