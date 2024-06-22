@@ -3,7 +3,6 @@ return {
         'nvim-treesitter/nvim-treesitter',
         build = ":TSUpdate",
         main = "nvim-treesitter.configs",
-        dependencies = {"windwp/nvim-ts-autotag", opts = {}},
 
         opts = {
             auto_install = true,
@@ -20,9 +19,12 @@ return {
                 enable = false
             },
 
-            autotag = {
-                enable = true
-            }
         }
+    },
+    {
+        'windwp/nvim-ts-autotag',
+        opts = {
+            enable_close_on_slash = false -- Auto close on trailing </
+        },
     },
 }

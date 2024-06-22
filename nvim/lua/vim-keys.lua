@@ -24,8 +24,8 @@ vim.keymap.set("v", "<Left>", "<Nop>")
 vim.keymap.set("v", "<Right>", "<Nop>")
 
 -- pula 8 linhas
-vim.keymap.set("n", "J", "8j");
-vim.keymap.set("n", "K", "8k");
+vim.keymap.set("n", "J", "8jzz");
+vim.keymap.set("n", "K", "8kzz");
 
 -- Muda o diretório para o diretório do arquivo aberto
 vim.keymap.set("n", "cd", ":cd %:h<CR>")
@@ -34,5 +34,8 @@ vim.keymap.set("n", "cd", ":cd %:h<CR>")
 vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
 
 -- Mostra em uma janelinha o erro de um linha de código
-
 vim.keymap.set('n', 'Ç', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap=true, silent=true })
+
+-- Crtl + c e Crtl + v
+vim.keymap.set('v', '<C-c>', '"+y')
+vim.keymap.set('n', '<C-v>', '"+p')

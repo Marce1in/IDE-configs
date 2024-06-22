@@ -25,7 +25,13 @@ vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
+vim.opt.showmode = false
+vim.opt.cmdheight = 2
+
+
 vim.g.mapleader = " "
+
+
 
 -- Highlight quando usa yank
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })

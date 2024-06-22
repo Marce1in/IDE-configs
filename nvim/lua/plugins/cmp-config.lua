@@ -9,6 +9,7 @@ return {
 
         config = function()
             local cmp = require('cmp')
+            local ls = require('luasnip')
 
             cmp.setup {
                 snippet = {
@@ -28,8 +29,9 @@ return {
                     ['<C-f>'] = cmp.mapping.scroll_docs(4),
                     ['<C-Space>'] = cmp.mapping.complete(),
                     ['<C-e>'] = cmp.mapping.abort(),
-                    ['<CR>'] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-
+                    ['<C-n>'] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Insert },
+                    ['<C-p>'] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Insert },
+                    ['<CR>'] = cmp.mapping.confirm({ select = true }),
                 },
 
                 sources = cmp.config.sources(
@@ -41,6 +43,9 @@ return {
                         { name = 'buffer' }
                     })
             }
+
+            vim.keymap.set({"i", "s"}, "<C-k>", function() ls.jump( 1) end, {silent = true})
+            vim.keymap.set({"i", "s"}, "<C-j>", function() ls.jump(-1) end, {silent = true})
         end
     }
 }
