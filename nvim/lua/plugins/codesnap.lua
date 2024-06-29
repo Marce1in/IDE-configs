@@ -1,5 +1,8 @@
 return {
     "mistricky/codesnap.nvim",
+
+    event = "VeryLazy",
+
     build = "make",
     opts = {
         bg_color = "#535c68",

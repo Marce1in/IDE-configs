@@ -31,7 +31,6 @@ vim.opt.cmdheight = 2
 vim.g.mapleader = " "
 
 vim.opt.list = true
-vim.opt.lcs = "trail:•"
 
 -- Highlight quando usa yank
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })

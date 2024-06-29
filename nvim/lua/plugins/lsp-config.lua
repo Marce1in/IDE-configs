@@ -1,10 +1,14 @@
 return {
     {
         'williamboman/mason.nvim',
+        event = "VeryLazy",
+
         opts = {}
+
     },
     {
         'williamboman/mason-lspconfig.nvim',
+
         opts = {
             ensure_installed = {
                 'lua_ls',
@@ -20,6 +24,8 @@ return {
     },
     {
         'neovim/nvim-lspconfig',
+        event = "VeryLazy",
+
         config = function()
             local cap = require('cmp_nvim_lsp').default_capabilities()
             local lsp = require('lspconfig')
