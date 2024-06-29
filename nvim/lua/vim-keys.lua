@@ -8,24 +8,14 @@ vim.keymap.set("n", "<C-p>", ":bp<CR>")
 vim.keymap.set("n", "<C-d>", ":bd<CR>")
 
 -- Desliga as setas
-vim.keymap.set("i", "<Up>", "<Nop>")
-vim.keymap.set("i", "<Down>", "<Nop>")
-vim.keymap.set("i", "<Left>", "<Nop>")
-vim.keymap.set("i", "<Right>", "<Nop>")
-
-vim.keymap.set("n", "<Up>", "<Nop>")
-vim.keymap.set("n", "<Down>", "<Nop>")
-vim.keymap.set("n", "<Left>", "<Nop>")
-vim.keymap.set("n", "<Right>", "<Nop>")
-
-vim.keymap.set("v", "<Right>", "<Nop>")
-vim.keymap.set("v", "<Down>", "<Nop>")
-vim.keymap.set("v", "<Left>", "<Nop>")
-vim.keymap.set("v", "<Right>", "<Nop>")
+vim.keymap.set({"i", "n", "v"}, "<Up>", "<Nop>")
+vim.keymap.set({"i", "n", "v"}, "<Down>", "<Nop>")
+vim.keymap.set({"i", "n", "v"}, "<Left>", "<Nop>")
+vim.keymap.set({"i", "n", "v"}, "<Right>", "<Nop>")
 
 -- pula 8 linhas
-vim.keymap.set("n", "J", "8jzz");
-vim.keymap.set("n", "K", "8kzz");
+-- vim.keymap.set("n", "J", "8j");
+-- vim.keymap.set("n", "K", "8k");
 
 -- Muda o diretório para o diretório do arquivo aberto
 vim.keymap.set("n", "cd", ":cd %:h<CR>")
@@ -37,5 +27,5 @@ vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
 vim.keymap.set('n', 'Ç', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap=true, silent=true })
 
 -- Crtl + c e Crtl + v
-vim.keymap.set('v', '<C-c>', '"+y')
-vim.keymap.set('n', '<C-v>', '"+p')
+vim.keymap.set({'v', 'n'}, '<leader>y', '"+y')
+vim.keymap.set({'v', 'n'}, '<leader>p', '"+p')
