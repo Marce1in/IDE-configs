@@ -26,6 +26,9 @@ vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
 -- Mostra em uma janelinha o erro de um linha de código
 vim.keymap.set('n', 'Ç', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap=true, silent=true })
 
+vim.keymap.set('n', '{', '{zz')
+vim.keymap.set('n', '}', '}zz')
+
 -- Crtl + c e Crtl + v
 vim.keymap.set({'v', 'n'}, '<leader>y', '"+y')
 vim.keymap.set({'v', 'n'}, '<leader>p', '"+p')
