@@ -13,6 +13,9 @@ vim.keymap.set({"i", "n", "v"}, "<Down>", "<Nop>")
 vim.keymap.set({"i", "n", "v"}, "<Left>", "<Nop>")
 vim.keymap.set({"i", "n", "v"}, "<Right>", "<Nop>")
 
+vim.keymap.set("i", "<C-h>", "<Left>")
+vim.keymap.set("i", "<C-l>", "<Right>")
+
 -- pula 8 linhas
 -- vim.keymap.set("n", "J", "8j");
 -- vim.keymap.set("n", "K", "8k");

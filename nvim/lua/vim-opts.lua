@@ -29,6 +29,7 @@ vim.opt.showmode = false
 vim.opt.cmdheight = 2
 
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 vim.opt.list = true
 

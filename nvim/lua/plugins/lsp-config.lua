@@ -19,6 +19,7 @@ return {
                 'tsserver',
                 'dockerls',
                 'pyright',
+                'clojure_lsp'
             }
         }
     },
@@ -38,6 +39,7 @@ return {
             lsp.tsserver.setup {capabilities = cap}
             lsp.dockerls.setup {capabilities = cap}
             lsp.pyright.setup {capabilities = cap}
+            lsp.clojure_lsp.setup {capabilities = cap}
 
             vim.keymap.set('n', 'ge', vim.lsp.buf.declaration, {})
             vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
