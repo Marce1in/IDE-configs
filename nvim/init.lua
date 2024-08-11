@@ -14,3 +14,10 @@ vim.opt.rtp:prepend(lazypath)
 require('vim-opts')
 require('vim-keys')
 require("lazy").setup('plugins')
+
+vim.api.nvim_create_autocmd("BufNewFile", {
+    group = vim.api.nvim_create_augroup("conjure_log_disable_lsp", { clear = true }),
+    pattern = { "conjure-log-*" },
+    callback = function() vim.diagnostic.disable(0) end,
+    desc = "Conjure Log disable LSP diagnostics",
+})
