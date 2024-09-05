@@ -3,7 +3,7 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Buffers
-vim.keymap.set("n", "<C-n>", ":bn<CR>")
+vim.keymap.set("n", "<C-o>", ":bn<CR>")
 vim.keymap.set("n", "<C-p>", ":bp<CR>")
 vim.keymap.set("n", "<C-d>", ":bd<CR>")
 
@@ -35,3 +35,7 @@ vim.keymap.set('n', '}', '}zz')
 -- Crtl + c e Crtl + v
 vim.keymap.set({'v', 'n'}, '<leader>y', '"+y')
 vim.keymap.set({'v', 'n'}, '<leader>p', '"+p')
+
+-- Desfocar do terminal
+vim.keymap.set('t', '<C-x>', "<C-\\><C-n><C-w>h",{silent = true})
+vim.keymap.set('n', '<C-t>', ":term <CR>",{silent = true})
