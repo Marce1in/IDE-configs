@@ -11,15 +11,17 @@ return {
 
         opts = {
             ensure_installed = {
-                'lua_ls',
-                'clangd',
+                -- 'lua_ls',
+                -- 'clangd',
+                'prismals',
                 'html',
                 'cssls',
                 'tailwindcss',
-                'tsserver',
+                'ts_ls',
                 'dockerls',
                 'pyright',
-                'clojure_lsp'
+                'sqlls'
+                -- 'clojure_lsp'
             }
         }
     },
@@ -36,10 +38,12 @@ return {
             lsp.html.setup {capabilities = cap}
             lsp.cssls.setup {capabilities = cap}
             lsp.tailwindcss.setup {capabilities = cap}
-            lsp.tsserver.setup {capabilities = cap}
+            lsp.ts_ls.setup {capabilities = cap}
             lsp.dockerls.setup {capabilities = cap}
             lsp.pyright.setup {capabilities = cap}
             lsp.clojure_lsp.setup {capabilities = cap}
+            lsp.sqlls.setup {capabilities = cap}
+            lsp.prismals.setup {capabilities = cap}
 
             vim.keymap.set('n', 'ge', vim.lsp.buf.declaration, {})
             vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})

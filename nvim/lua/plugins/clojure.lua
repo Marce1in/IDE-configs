@@ -18,7 +18,7 @@ return {
         config = function()
             local cmp = require("cmp")
             local config = cmp.get_config()
-            table.insert(config.sources, { name = "conjure" })
+            table.insert(config.sources, { name = {"conjure", "python"} })
             return cmp.setup(config)
         end,
     },

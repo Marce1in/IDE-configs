@@ -6,6 +6,10 @@ return {
     opts = {
         mappings = {
             close = '-'
+        },
+
+        options = {
+            use_as_default_explorer = true
         }
     },
     keys = {

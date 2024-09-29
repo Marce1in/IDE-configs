@@ -31,6 +31,9 @@ vim.opt.cmdheight = 2
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.opt.list = true
 
 vim.opt.laststatus = 3
