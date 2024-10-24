@@ -16,10 +16,24 @@ return {
                 'html',
                 'cssls',
                 'tailwindcss',
-                'tsserver',
+                'ts_ls',
                 'dockerls',
                 'pyright',
-                'clojure_lsp'
+                'eslint',
+                'clojure_lsp',
+                'sqls',
+                'jdtls',
+                'prismals',
+                'bashls',
+                'elixirls',
+                'solargraph',
+                'cobol_ls',
+                'zls',
+                'asm_lsp',
+                'intelephense',
+                'elp',
+                'rust_analyzer',
+                'arduino_language_server'
             }
         }
     },
@@ -31,15 +45,29 @@ return {
             local cap = require('cmp_nvim_lsp').default_capabilities()
             local lsp = require('lspconfig')
 
-            lsp.lua_ls.setup {capabilities = cap}
-            lsp.clangd.setup {capabilities = cap}
-            lsp.html.setup {capabilities = cap}
-            lsp.cssls.setup {capabilities = cap}
-            lsp.tailwindcss.setup {capabilities = cap}
-            lsp.tsserver.setup {capabilities = cap}
-            lsp.dockerls.setup {capabilities = cap}
-            lsp.pyright.setup {capabilities = cap}
-            lsp.clojure_lsp.setup {capabilities = cap}
+            lsp.lua_ls.setup { capabilities = cap }
+            lsp.clangd.setup { capabilities = cap }
+            lsp.html.setup { capabilities = cap }
+            lsp.cssls.setup { capabilities = cap }
+            lsp.tailwindcss.setup { capabilities = cap }
+            lsp.ts_ls.setup { capabilities = cap }
+            lsp.dockerls.setup { capabilities = cap }
+            lsp.pyright.setup { capabilities = cap }
+            lsp.clojure_lsp.setup { capabilities = cap }
+            lsp.sqls.setup { capabilities = cap }
+            lsp.jdtls.setup { capabilities = cap }
+            lsp.prismals.setup { capabilities = cap }
+            lsp.bashls.setup { capabilities = cap }
+            lsp.eslint.setup { capabilities = cap }
+            lsp.elixirls.setup { capabilities = cap, cmd = { "elixir-ls" } }
+            lsp.solargraph.setup { capabilities = cap }
+            lsp.cobol_ls.setup { capabilities = cap }
+            lsp.zls.setup { capabilities = cap }
+            lsp.asm_lsp.setup { capabilities = cap }
+            lsp.intelephense.setup { capabilities = cap }
+            lsp.elp.setup { capabilities = cap }
+            lsp.rust_analyzer.setup { capabilities = cap }
+            lsp.arduino_language_server.setup { capabilities = cap }
 
             vim.keymap.set('n', 'ge', vim.lsp.buf.declaration, {})
             vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
@@ -50,8 +78,6 @@ return {
             vim.keymap.set('n', 'ç', vim.lsp.buf.hover, {})
             vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, {})
             vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, {})
-
-
         end
     }
 }

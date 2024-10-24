@@ -3,7 +3,7 @@ return {
 
     event = "VeryLazy",
 
-    build = "make",
+    build = "make build_generator",
     opts = {
         bg_color = "#535c68",
         mac_window_bar = false,

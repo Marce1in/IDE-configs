@@ -4,6 +4,9 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
 -- vim.opt.tabstop = 2
 -- vim.opt.shiftwidth = 2
 -- vim.opt.softtabstop = 2
@@ -30,6 +33,8 @@ vim.opt.cmdheight = 2
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+
+vim.g.loaded_netrwPlugin = 0
 
 vim.opt.list = true
 

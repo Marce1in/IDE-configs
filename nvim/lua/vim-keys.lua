@@ -2,16 +2,27 @@
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- Buffers
+
+
+vim.keymap.set("n", "<C-u>", "<C-o>")
+
 vim.keymap.set("n", "<C-o>", ":bn<CR>")
 vim.keymap.set("n", "<C-p>", ":bp<CR>")
 vim.keymap.set("n", "<C-d>", ":bd<CR>")
 
 -- Desliga as setas
-vim.keymap.set({"i", "n", "v"}, "<Up>", "<Nop>")
-vim.keymap.set({"i", "n", "v"}, "<Down>", "<Nop>")
-vim.keymap.set({"i", "n", "v"}, "<Left>", "<Nop>")
-vim.keymap.set({"i", "n", "v"}, "<Right>", "<Nop>")
+vim.keymap.set({"i", "n", "v"}, "<Up>", "<C-W>k")
+vim.keymap.set({"i", "n", "v"}, "<Down>", "<C-W>j")
+vim.keymap.set({"i", "n", "v"}, "<Left>", "<C-W>h")
+vim.keymap.set({"i", "n", "v"}, "<Right>", "<C-W>l")
+
+vim.keymap.set({"i", "n", "v"}, "<C-Up>", ":resize -3<CR>")
+vim.keymap.set({"i", "n", "v"}, "<C-Down>", ":resize +3<CR>")
+vim.keymap.set({"i", "n", "v"}, "<C-Left>", ":vertical resize -3<CR>")
+vim.keymap.set({"i", "n", "v"}, "<C-Right>", ":vertical resize +3<CR>")
+
+vim.keymap.set({"i", "n", "v"}, "<leader><Top>", "<C-w>t<C-w>K")
+vim.keymap.set({"i", "n", "v"}, "<leader><Right>", "<C-w>t<C-w>H")
 
 vim.keymap.set("i", "<C-h>", "<Left>")
 vim.keymap.set("i", "<C-l>", "<Right>")
