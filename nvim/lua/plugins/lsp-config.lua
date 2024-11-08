@@ -30,7 +30,7 @@ return {
                 'cobol_ls',
                 'zls',
                 'asm_lsp',
-                'intelephense',
+                'phpactor',
                 'elp',
                 'rust_analyzer',
                 'arduino_language_server'
@@ -42,7 +42,7 @@ return {
         event = "VeryLazy",
 
         config = function()
-            local cap = require('cmp_nvim_lsp').default_capabilities()
+            local cap = require('blink.cmp').get_lsp_capabilities()
             local lsp = require('lspconfig')
 
             lsp.lua_ls.setup { capabilities = cap }
@@ -64,7 +64,7 @@ return {
             lsp.cobol_ls.setup { capabilities = cap }
             lsp.zls.setup { capabilities = cap }
             lsp.asm_lsp.setup { capabilities = cap }
-            lsp.intelephense.setup { capabilities = cap }
+            lsp.phpactor.setup { capabilities = cap }
             lsp.elp.setup { capabilities = cap }
             lsp.rust_analyzer.setup { capabilities = cap }
             lsp.arduino_language_server.setup { capabilities = cap }

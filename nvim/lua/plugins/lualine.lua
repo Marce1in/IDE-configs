@@ -4,6 +4,18 @@ return {
     event = "VeryLazy",
 
     opts = {
+        sections = {
+
+            lualine_x = {
+                "none"
+            },
+            lualine_y = {
+                "none"
+            },
+            lualine_z = {
+                "none"
+            }
+        },
         options = {
             theme = (
                 function ()
